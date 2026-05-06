@@ -1,0 +1,73 @@
+{
+  "repo": "ember-chain-oracle-flow",
+  "language": "C",
+  "category": "Blockchain tooling",
+  "goal": "Implement a C blockchain tooling project for oracle constraint solving, using bounded scenario files and conflict explanations.",
+  "review_model": {
+    "terms": [
+      "event finality",
+      "nonce pressure",
+      "settlement risk",
+      "proof depth"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "event finality",
+      "signal": 51,
+      "slack": 53,
+      "drag": 22,
+      "confidence": 58,
+      "score": 147,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "nonce pressure",
+      "signal": 44,
+      "slack": 41,
+      "drag": 10,
+      "confidence": 85,
+      "score": 184,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "settlement risk",
+      "signal": 82,
+      "slack": 30,
+      "drag": 18,
+      "confidence": 55,
+      "score": 195,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "proof depth",
+      "signal": 63,
+      "slack": 38,
+      "drag": 16,
+      "confidence": 60,
+      "score": 176,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "event finality",
+      "signal": 69,
+      "slack": 45,
+      "drag": 10,
+      "confidence": 61,
+      "score": 214,
+      "lane": "ship"
+    }
+  ]
+}
